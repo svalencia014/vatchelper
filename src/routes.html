@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link type="text/css" rel="stylesheet" href="./style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>vATC Helper</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="first">
+                <p>vATC Helper</p>
+            </div>
+        </div>
+        <main>
+            <h1>Route Lookup</h1>
+            <div class="search">
+                <form>
+                    <div class="box">
+                        <label for="departure">Departure: </label>
+                        <input type="text" placeholder="Departure" id="departure"/>
+                    </div>
+                    <div class="box">
+                        <label for="arrival">Arrival:</label>
+                        <input type="text" placeholder="Arrival" id="arrival"/>
+                    </div>
+                    <div class="box">
+                        <button id="search" type="button">Search</button>
+                    </div>
+                </form>
+            </div>
+            <script src="./routes.js"></script>
+        </main>
+    </body>
+</html>
