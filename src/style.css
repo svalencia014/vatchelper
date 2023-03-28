@@ -13,7 +13,9 @@ h1 {
 }
 
 main > p,
-.first > p{
+.first > p,
+.second > a,
+.results > p{
     padding: 0;
     font-family: 'Source Code Pro', monospace;
 }
@@ -27,14 +29,27 @@ main > p {
     width:100%;
     overflow: hidden;
     background-color: #626262;
-    padding: 0px;
+    padding: 0;
 }
 
-.navbar > .first {
-    float: left;
+.navbar > .first > p {
+    font-size: medium;
     padding: 0 0 0 2em;
     color: #ffffff;
-    font-family: 'source'
+    font-family: 'Source Code Pro', monospace;
+    float: left;
+}
+.navbar > .second > a {
+    font-size: medium;
+    text-decoration: none;
+    padding: 0 2em 0 0;
+    color: #ffffff;
+    font-family: 'Source Code Pro', monospace;
+    float: right;
+}
+
+.second {
+    margin-top: 16px;
 }
 
 .links{
@@ -73,13 +88,15 @@ main > p {
     font-family: 'Source Code Pro', monospace;
 }
 
-.search {
+.search,
+.results {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.search > form {
+.search > form,
+.results > section {
     border: 1px solid #000;
     width: 200px;
 }
