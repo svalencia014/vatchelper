@@ -4,28 +4,23 @@
         <link type="text/css" rel="stylesheet" href="./style.css" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Route Lookup | vATC Helper</title>
+        <title>Flight Plan Checker | vATC Helper</title>
     </head>
     <body>
         <div class="navbar">
             <div class="first">
                 <p>vATC Helper</p>
             </div>
-            <div class="second">
-                <a href="./index.html">Home</a>
-            </div>
+            <a href="./index.html" class="second">Home</a>
         </div>
         <main>
-            <h1>Route Lookup</h1>
+            <h1>Flight Plan Lookup</h1>
+            <p>VATSIM Only</p>
             <div class="search">
                 <form>
                     <div class="box">
-                        <label for="departure">Departure: </label>
-                        <input type="text" placeholder="Departure" id="departure"/>
-                    </div>
-                    <div class="box">
-                        <label for="arrival">Arrival:</label>
-                        <input type="text" placeholder="Arrival" id="arrival"/>
+                        <label for="callsign">Callsign: </label>
+                        <input type="text" placeholder="N123AB" id="callsign"/>
                     </div>
                     <div class="box">
                         <button id="search" type="button">Search</button>

@@ -39,17 +39,21 @@ main > p {
     font-family: 'Source Code Pro', monospace;
     float: left;
 }
-.navbar > .second > a {
+.navbar > .second{
     font-size: medium;
     text-decoration: none;
-    padding: 0 2em 0 0;
+    padding: 0 1em 0 0;
     color: #ffffff;
     font-family: 'Source Code Pro', monospace;
     float: right;
 }
 
 .second {
-    margin-top: 16px;
+    margin: 16px;
+}
+
+a.second:hover {
+    background-color: #e5e5e5
 }
 
 .links{

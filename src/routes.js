@@ -19,17 +19,24 @@ async function getData(url) {
 }
 
 button.addEventListener('click', async () => {
-    let dep = document.getElementById('departure').value;
-    let arr = document.getElementById('arrival').value;
-    let url = "https://api.svalencia.cf/route/" + dep + arr;
-    let route = await getData(url);
-    if (route.type == 1) {
-        data.innerText = `East Ops: ${route.route0}\n\nWest Ops: ${route.route1}`;
-    } else if (route.type == 2) {
-        data.innerText = `North Ops: ${route.route1}\n\nSouth Ops: ${route.route0}`;
-    } else if (route.type == 0) {
-        data.innerText = route.route;
-    } else {
-        data.innerText = route;
+    if (document.title.includes("Route")) {
+        let dep = document.getElementById('departure').value;
+        let arr = document.getElementById('arrival').value;
+        let url = "https://api.svalencia.cf/route/" + dep + arr;
+        let route = await getData(url);
+        if (route.type == 1) {
+            data.innerText = `East Ops: ${route.route0}\n\nWest Ops: ${route.route1}`;
+        } else if (route.type == 2) {
+            data.innerText = `North Ops: ${route.route1}\n\nSouth Ops: ${route.route0}`;
+        } else if (route.type == 0) {
+            data.innerText = route.route;
+        } else {
+            data.innerText = route;
+        }
+    } else if (document.title.includes("Flight")) {
+        let callsign = document.getElementById('callsign').value;
+        let url = "https://api.svalencia.cf/vatsim/" + callsign;
+        let flight = await getData(url);
+        data.innerText = JSON.parse(flight);
     }
 });
